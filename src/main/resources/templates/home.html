@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel with us</title>
+</head>
+<body>
+
+<div>
+    <table>
+        <tbody>
+        <tr th:each="offer : ${offers}">
+            <td>
+                <a th:href="@{'/offerDetails/'+${offer.offerId}}">
+                    <span th:text="${offer.city}"></span></a></td>
+            <td th:text="${offer.country}"></td>
+            <td th:text="${offer.startDate}"></td>
+            <td th:text="${offer.endDate}"></td>
+            <td th:text="${offer.offerDescription}"></td>
+            <td th:text="${offer.offerPrice}"></td>
+            <td th:text="${offer.offerActivity}"></td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
